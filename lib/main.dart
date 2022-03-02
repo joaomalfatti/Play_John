@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_joao/modules/login/login_page.dart';
 import 'package:play_joao/modules/splash/splash_page.dart';
 import 'package:play_joao/shared/themes/app_colors.dart';
 
@@ -14,7 +15,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.primary
       ),
-      home: SplashPage(),
+      home: LoginPage(),
     );
   }
 }
