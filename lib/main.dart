@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:play_joao/modules/splash/splash_page.dart';
+import 'package:play_joao/shared/themes/app_colors.dart';
 
 void main() {
-  runApp(MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.purple), home: HomePage()));
+  runApp(AppWidget());
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  var count = 0;
-
-  void increment() {
-    count++;
-    setState(() {
-          
-        });
-  }
-
+class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Meu Primeiro App"),
+    return MaterialApp(
+      title: 'Play John',
+      theme: ThemeData(
+        primaryColor: AppColors.primary
       ),
-      body: Center(
-        child: Text(
-          "CONTADOR\n$count",
-          textAlign: TextAlign.center,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          increment();
-        },
-      ),
+      home: SplashPage(),
     );
   }
 }
